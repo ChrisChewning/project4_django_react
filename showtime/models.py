@@ -23,7 +23,7 @@ class Show(models.Model):
     show_actor = models.ForeignKey(Actor, on_delete=models.CASCADE, related_name='shows')
 
     def __str__(self):
-        return str(self.show_title)
+        return str(self.show_title) #this needs to be what you show on the screen.
 
 
 #ForeignKey: Shows is saying you can tie actors to shows. it's like when you included one schema inside another one.

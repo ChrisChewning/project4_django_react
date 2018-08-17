@@ -5,4 +5,4 @@ from .models import Actor, Show
 admin.site.register(Actor)
 admin.site.register(Show)
 
-#note: you can't do (Actor, Show)
+#note: you can't do (Actor, Show) in one line.
