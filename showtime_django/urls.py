@@ -15,14 +15,32 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path #path for reg ex?
 from django.conf.urls import include
 
-#your login and logout routes.
+#from folder showtime . views is views.py
+from showtime.views import renderReact
 
+from django.views.generic import TemplateView
+# urlpatterns = [
+#   path('admin/', admin.site.urls),
+#   # path('api/', include('mynewapp.urls')),
+#   re_path('.*', TemplateView.as_view(template_name='index.html')),
+# ]
+
+
+#your admin login and logout routes. I don't think it's for your user though.
 urlpatterns = [
 	path('admin/', admin.site.urls), #admin for your admin side of things
-    path('api-auth/', include('rest_framework.urls',   namespace='rest_framework')), #the route for your api request. your requests will be localhost://8000/api-auth/...  maybe it's for your login/logout? 
+    path('api-auth/', include('rest_framework.urls',   namespace='rest_framework')), #the route for your api request. your requests will be localhost://8000/api-auth/...  maybe it's for your login/logout?
     #react will use this route to talk to the database.
-    path('', include('showtime.urls')) #this is where it goes for the urls.
+    path('', include('showtime.urls')), #this is where it goes for the urls.
+    re_path('.*', TemplateView.as_view(template_name='index.html')),
 ]
+
+# urlpatterns += [
+#     #the path that's conecting django to react. make this last
+#     #use a regular expression to catch every path possible.
+#     #note: django doesn't deal with 404 errors. React will have to.
+#     path(r'(?P<path>.*)', renderReact.as_view(), name = 'home')
+# ]

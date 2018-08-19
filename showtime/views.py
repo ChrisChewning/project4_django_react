@@ -1,4 +1,8 @@
+from django.views.generic import View
 from django.shortcuts import render
+
+
+
 
 # Create your views here.
 from rest_framework import generics
@@ -7,15 +11,21 @@ from .serializers import ActorSerializer, ShowSerializer
 from .models import Actor, Show
 
 
+#this renders a template that will connect to React.
+class renderReact(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "templates/react-render.html", {})
 
 
+
+#this creates Actor list view and create view for the API
 class ActorList(generics.ListCreateAPIView):
-    #creates list view and create view for the API
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
 
+
+#this creates Actor show, update, and delete routes for our API.
 class ActorDetail(generics.RetrieveUpdateDestroyAPIView):
-    #creates show, update, and delete routes for our API.
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
 

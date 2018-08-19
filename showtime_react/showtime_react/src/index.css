@@ -1,0 +1,27 @@
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: sans-serif;
+  text-align: center;
+  /* background-color: blue; */
+}
+
+.navigation ul {
+  background-color: yellow;
+  list-style-type: none;
+  display: flex;
+  height: 10vh;
+    justify-content: space-evenly;
+
+  /* align-content: flex-end; */
+}
+
+.navigation li {
+  line-height: 10vh;
+    /* margin-left: 30px; */
+}

@@ -56,7 +56,9 @@ ROOT_URLCONF = 'showtime_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+      os.path.join(BASE_DIR, 'build')
+    ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +70,10 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_DIRS = [
+os.path.join(BASE_DIR, 'build/static'),
+] 
 
 WSGI_APPLICATION = 'showtime_django.wsgi.application'
 
