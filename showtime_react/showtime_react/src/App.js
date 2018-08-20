@@ -9,6 +9,7 @@ import Welcome from './Welcome';
 import Similar from './Similar';
 import WhatElse from './WhatElse';
 
+
 class App extends Component {
 
 render() {
@@ -16,7 +17,6 @@ render() {
     <div>
 
   < Nav />
-
 
     <Switch>
       <Route exact path='/' component = {Welcome} />

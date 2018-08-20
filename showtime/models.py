@@ -1,4 +1,6 @@
 from django.db import models
+from django.conf import settings
+from django.contrib.auth.models import User
 
 
 #one to many.
@@ -21,6 +23,7 @@ class Show(models.Model):
     show_title = models.CharField(max_length=100)
     show_photo_url = models.TextField()
     show_actor = models.ForeignKey(Actor, on_delete=models.CASCADE, related_name='shows')
+    show_main_url = models.TextField()
 
     def __str__(self):
         return str(self.show_title) #this needs to be what you show on the screen.

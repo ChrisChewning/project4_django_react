@@ -5,6 +5,12 @@ from .models import Actor, Show
 
 #The Meta class within our Artist serializer class specifies meta data about our serializer. In this class, the model it serializes and the fields we want to serialize. Also, songs is our HyperlinkedRelatedField, `
 
+#serializers = turns query sets into json data.
+
+# class Meta:
+#     model = User
+#     fields = ('id', 'username', 'cars', 'comments')
+
 
 class ActorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -16,4 +22,4 @@ class ActorSerializer(serializers.HyperlinkedModelSerializer):
 class ShowSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Show
-        fields = ('id', 'show_title', 'show_photo_url',)
+        fields = ('id', 'show_title', 'show_photo_url', 'show_main_url')

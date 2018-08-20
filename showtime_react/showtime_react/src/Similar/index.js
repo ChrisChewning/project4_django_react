@@ -24,11 +24,6 @@ getSimilar = async () => {
 } //end of async call.
 
 
-// var newArray = this.state.oldArray.map(function(obj){
-//     return { id: obj.id, url: obj.url, }
-// });
-
-// return newArray[0].url + newArray[0].id
 
 // LOAD DATA loads the getSimilar function and then all the data from above.
 componentDidMount() {
@@ -52,36 +47,9 @@ return (
 ))}
 </div>
 
-)
+)}
+
 }
-}
-//NEED TO MAP OVER DATA HERE.
-
-// let showsMapped = this.similar.map((shows, i) => {
-//   return (
-//     <li key={i}>
-//       {this.state.similar} </li>
-//   )
-// })
-
-// {this.similar.map((item => (
-//   <div key={item}>
-//     <h1>{item.similar.show}</h1>
-//   </div>
-// ))}
-
-
-
-//Name
-//type
-
-
-
-    /* <p>  {this.state.similar} </p> */
-    /* if you don't map or spread operator over it 1st, you'll get the error 'Objects are not valid as a React child (found: object with keys {Name, Type}). If you meant to render a collection of children, use an array instead.' */
-
-   /* <Welcome shows={this.state.similar}/> */
-
 
 
 export default Similar;

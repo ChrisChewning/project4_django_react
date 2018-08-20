@@ -15,6 +15,9 @@ from django.urls import path, include
 #these are your backend paths to show your data.
 
 urlpatterns = [
+
+    # path('api/', views.ActorList.as_view(), name='both'),
+
     path('api/actors/', views.ActorList.as_view(), name='actor-list'),
     path('api/actors/<int:pk>', views.ActorDetail.as_view(), name='actor-detail'),
 

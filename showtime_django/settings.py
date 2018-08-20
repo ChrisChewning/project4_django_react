@@ -81,9 +81,9 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_DIRS = [
-os.path.join(BASE_DIR, 'build/static'),
-]
+# STATICFILES_DIRS = [
+# os.path.join(BASE_DIR, 'build/static'),
+# ]
 
 WSGI_APPLICATION = 'showtime_django.wsgi.application'
 
