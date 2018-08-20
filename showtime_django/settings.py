@@ -37,11 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'showtime',
+
     'rest_framework',
+    'corsheaders',
+    'showtime',
+
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', # new
+    'django.middleware.common.CommonMiddleware', # new
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,13 +56,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000/'
+)
+
 ROOT_URLCONF = 'showtime_django.urls'
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-      os.path.join(BASE_DIR, 'build')
+      os.path.join(BASE_DIR, 'build') #instead of  'DIRS': [os.path.join(BASE_DIR, "templates"), ],
     ],
         'APP_DIRS': True,
         'OPTIONS': {
