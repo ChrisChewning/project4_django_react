@@ -22,7 +22,7 @@ render() {
       <Route exact path='/' component = {Welcome} />
       <Route exact path='/whatelse' component ={WhatElse} />
       <Route exact path='/quotes' component= {QuoteRandomizer}/>
-      <Route exact path='/similar' component= {Similar} />
+      <Route exact path='/similarshows' component= {Similar} />
       <Route path='*' component= { Error } />
       <Redirect from='*' to='/home' />
     </Switch>

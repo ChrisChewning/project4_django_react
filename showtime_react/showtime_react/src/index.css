@@ -11,7 +11,7 @@ body {
   /* background-color: blue; */
 }
 
-.navigation ul {
+.navBar ul {
   background-color: yellow;
   list-style-type: none;
   display: flex;
@@ -19,7 +19,7 @@ body {
   justify-content: space-evenly;
 }
 
-.navigation li {
+.navBar li {
   line-height: 10vh;
     /* margin-left: 30px; */
 }

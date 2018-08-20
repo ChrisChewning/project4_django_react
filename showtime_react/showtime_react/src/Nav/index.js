@@ -1,27 +1,21 @@
 import React, {Component} from 'react';
-// import {Route, Switch, Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 // import Logout from '../Logout';
 
-
 const Nav = () => {
   return (
 
-    <nav className = "navigation">
+    <nav className = "navBar">
       <ul>
-        <li>What to Watch</li>
-      <li>Daily Quote</li>
-      <li>Login / Register</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to='/whatelse'>Actors' Other Work?</Link></li>
+        <li><Link to='/similarshows'>Similar Shows</Link></li>
+        <li><Link to='/quotes'>Get a Quote!</Link></li>
+        <li><Link to='/login'>Login / Register</Link></li>
+
     </ul>
-      {/* <ul>
-        <li><Link to='/profile'>My Profile</Link></li>
-        <li><Link to='/login'>Login</Link></li>
-
-        <li><Link to='/register'>Register</Link>
-      </li>
-
-    </ul> */}
   </nav>
   )
 }

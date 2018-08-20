@@ -12,7 +12,7 @@ class Similar extends Component {
 //GET DATA
 getSimilar = async () => {
   try {
-    const similarData = await fetch("https://tastedive.com/api/similar?k=317664-westwing-GQQG6YPC&q=west+wing&limit=50")
+    const similarData = await fetch("https://tastedive.com/api/similar?k=317664-westwing-GQQG6YPC&q=west+wing&limit=3")
 
     const getSimilarJson = await similarData.json();
     console.log(getSimilarJson.Similar.Results);
