@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 
 const Welcome = () => {
+
   // render(){
   //   const WelcomeImg={
   //     width: '200px',
@@ -18,7 +19,7 @@ const Welcome = () => {
         This is the West Wing Fan Page.
       </h1>
 
-      <img src='http://digitalspyuk.cdnds.net/17/45/980x490/landscape-1510231139-west-wing-cast-tease-today-160622-6adb387c0ab0e22b4bd4f88ccb14345b-1.jpg' />
+      <img  src='http://digitalspyuk.cdnds.net/17/45/980x490/landscape-1510231139-west-wing-cast-tease-today-160622-6adb387c0ab0e22b4bd4f88ccb14345b-1.jpg' />
 
     </div>
   );
