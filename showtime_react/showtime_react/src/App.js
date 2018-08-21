@@ -9,6 +9,7 @@ import Welcome from './Welcome';
 import Similar from './Similar';
 import WhatElse from './WhatElse';
 import Shows from './Shows';
+import CommentBox from './CommentBox';
 
 class App extends Component {
 
@@ -21,6 +22,8 @@ render() {
     <div>
 
   < Nav />
+  < CommentBox />
+
   {/* < Shows /> */}
 
     <Switch>

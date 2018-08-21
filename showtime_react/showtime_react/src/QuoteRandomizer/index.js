@@ -17,9 +17,17 @@ constructor(){
 //can you only use the this keyword inside of render?
 
 handleClick = () => {
-        const quotes = [' "Some (Schoolchildren) Don\'t... Raise Their Hand Cause They Think They\'re Going To Be Wrong. I Think You Should Say To These Kids, \'You Think You Get It Wrong Sometimes, You Should Come... See How The Big Boys Do It.\' " — C.J. Cregg' ]
+        const quotes = [' "Some (Schoolchildren) Don\'t... Raise Their Hand Cause They Think They\'re Going To Be Wrong. I Think You Should Say To These Kids, \'You Think You Get It Wrong Sometimes, You Should Come... See How The Big Boys Do It.\' " — C.J. Cregg',
 
-        // const quotes = [' "I\'m The Press Secretary, Boo-Boo. I Don\'t Have That Kind Of Time." — C.J. Cregg',   ];
+        ' "I\'m The Press Secretary, Boo-Boo. I Don\'t Have That Kind Of Time." — C.J. Cregg', ' "I Think Ambition Is Good. I Think Overreaching Is Good." — Sam Seaborn',
+
+        ' Flight Attendant: "Sir, I\'m going to have to ask that you turn off your cellular phone. Toby: "We\'re flying in a Lockheed Eagle Series L-1011. Came off the line ten months ago. Carries a Sim-5 transponder tracking system. And you\'re telling me I can still flummox this thing with something I bought at Radio Shack?" ',
+
+        'Leo: (on the phone with the New York Times) 17 across. Yes, 17 across is wrong... You\'re spelling his name wrong... What\'s my name? My name doesn\'t matter. I am just an ordinary citizen who relies on the Times crossword for stimulation. And I\'m telling you that I met the man twice. And I recommended a pre-emptive Exocet missile strike against his air force, so I think I know how... C.J.: Leo. Leo: They hang up on me every time. C.J: That\'s almost hard to believe.',
+
+
+
+ ];
 
 
 
@@ -50,11 +58,7 @@ handleClick = () => {
         <button onClick={this.handleClick}>Click Me!</button>
           <br/>
           {this.state.quote}
-
-            {/* {this.state.quote === true ? null : 'Let Bartlet Be Bartlet'} */}
-        {/* </button> */}
-        {/* <br /> */}
-        {/* {this.state.quote} */}
+          {/* {this.state.quote === true ? null : 'Let Bartlet Be Bartlet'} */}
 
       <Shows quote={this.props.quote} />
       {/* returning a jsx element. everything in this jsx element is already efined. when it gets to Shows it needs to know what it is. so it has to be imported to use in this class. */}
