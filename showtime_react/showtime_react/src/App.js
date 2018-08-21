@@ -8,15 +8,20 @@ import Error from './Error';
 import Welcome from './Welcome';
 import Similar from './Similar';
 import WhatElse from './WhatElse';
-
+import Shows from './Shows';
 
 class App extends Component {
 
+
+
+
 render() {
+
   return (
     <div>
 
   < Nav />
+  {/* < Shows /> */}
 
     <Switch>
       <Route exact path='/' component = {Welcome} />

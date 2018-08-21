@@ -9,6 +9,8 @@ class Similar extends Component {
   }
 }
 
+
+
 //GET DATA
 getSimilar = async () => {
   try {

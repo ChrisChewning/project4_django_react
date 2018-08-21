@@ -1,11 +1,23 @@
 import React, {Component} from 'react';
 import Shows from '../Shows';
 
+
 class WhatElse extends Component {
-  state = {
+  constructor(){
+    super();
+
+
+  this.state = {
     actors: []
   }
-  async componentDidMount(props) {
+}
+
+// const Receive = (props) => {
+  // console.log(props);
+// }
+
+  async componentDidMount() {
+
     try {
       const res = await fetch('http://127.0.0.1:8000/api/actors');
       const actors = await res.json();
@@ -17,7 +29,22 @@ class WhatElse extends Component {
       console.log(e);
     }
   }
+
+
+  // function sendIt(props) {
+  //   return (
+  //       <Avatar user={props.user} />
+  //       <div className="UserInfo-name">
+  //         {props.user.name}
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
+
   render() {
+
+    // console.log(this.props);  //this.props.shows is undefined. props.shows is the meta object
     return (
       <div>
         {this.state.actors.map(item => (
@@ -26,13 +53,17 @@ class WhatElse extends Component {
             <br/>
             <img className='actorImages'src={item.actor_photo_url} />
             <br/>
-            <span>{item.shows}</span>
+            {item.shows.map((show, index) => (<li key={index}>{show}</li>))}
+            <Shows />
+            {/* <span>{item.shows}</span> */}
           </div>
         ))}
-        {this.props.shows}
+
+        {/* {this.props.shows} */}
       </div>
     );
   }
 }
+
 
 export default WhatElse;
