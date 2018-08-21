@@ -7,13 +7,11 @@ import Nav from './Nav';
 import Error from './Error';
 import Welcome from './Welcome';
 import Similar from './Similar';
-import WhatElse from './WhatElse';
+// import WhatElse from './WhatElse';
 import Shows from './Shows';
 import CommentBox from './CommentBox';
 
 class App extends Component {
-
-
 
 
 render() {
@@ -22,13 +20,13 @@ render() {
     <div>
 
   < Nav />
-  < CommentBox />
+  {/* < CommentBox /> */}
 
   {/* < Shows /> */}
 
     <Switch>
       <Route exact path='/' component = {Welcome} />
-      <Route exact path='/whatelse' component ={WhatElse} />
+      <Route exact path='/whatelse' component ={Shows} />
       <Route exact path='/quotes' component= {QuoteRandomizer}/>
       <Route exact path='/similarshows' component= {Similar} />
       <Route path='*' component= { Error } />

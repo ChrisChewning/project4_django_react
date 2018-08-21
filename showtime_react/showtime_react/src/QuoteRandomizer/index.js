@@ -60,7 +60,7 @@ handleClick = () => {
           {this.state.quote}
           {/* {this.state.quote === true ? null : 'Let Bartlet Be Bartlet'} */}
 
-      <Shows quote={this.props.quote} />
+      {/* <Shows quote={this.props.quote} /> */}
       {/* returning a jsx element. everything in this jsx element is already efined. when it gets to Shows it needs to know what it is. so it has to be imported to use in this class. */}
 
       </div>
