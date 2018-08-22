@@ -4,10 +4,11 @@ import CommentForm from '../CommentForm';
 
 
 
+//
 class CommentBox extends Component {
    render() {
      return (
-       <div className="commentBox">
+       <div className="commentsBox">
          <h1>This is comment box</h1>
          < CommentForm />
          < CommentList />
@@ -15,7 +16,7 @@ class CommentBox extends Component {
      );
    }
 }
-
-
-
+//
+//
+//
 export default CommentBox;

@@ -26,11 +26,12 @@ render() {
 
     <Switch>
       <Route exact path='/' component = {Welcome} />
-      <Route exact path='/whatelse' component ={Shows} />
-      <Route exact path='/quotes' component= {QuoteRandomizer}/>
+      <Route exact path='/whatelse' component = {Shows} />
+      <Route exact path='/quotes' component = {QuoteRandomizer}/>
       <Route exact path='/similarshows' component= {Similar} />
-      <Route path='*' component= { Error } />
-      <Redirect from='*' to='/home' />
+      <Route exact path='/blog' component = {CommentBox} />
+      <Route path='*' component = {Error} />
+      <Redirect from='*' to = '/home' />
     </Switch>
 
 

@@ -10,7 +10,7 @@ const Nav = () => {
         <li><Link to='/whatelse'>Actors' Other Work?</Link></li>
         <li><Link to='/similarshows'>Similar Shows</Link></li>
         <li><Link to='/quotes'>Get a Quote!</Link></li>
-        <li><Link to='/login'>Login / Register</Link></li>
+        <li><Link to='/blog'>Blog</Link></li>
     </ul>
   </nav>
   )

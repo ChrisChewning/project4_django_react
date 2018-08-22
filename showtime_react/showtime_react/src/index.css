@@ -29,3 +29,15 @@ body {
   height: 150px;
   width: 150px;
 }
+
+.commentBox {
+  background-color: #D3D3D3;
+
+  height: 50vh;
+  width: 200vh;
+}
+
+.comment {
+  margin-top: 20px;
+  background-color: pink;
+}
