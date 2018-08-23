@@ -24,15 +24,37 @@ body {
     /* margin-left: 30px; */
 }
 
-
 .actorImages {
   height: 150px;
   width: 150px;
+  border: 1px solid black;
+  border-radius: 10%;
 }
 
+.actorInfo {
+  min-height: 350px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  background-color: yellow;
+  vertical-align: top;
+  /* in inline-block it is defaulted to vertical-align: baseline */
+
+}
+
+
+.recommendedShows {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+/* COMMENT PAGE */
 .commentBox {
   background-color: #D3D3D3;
-
   height: 50vh;
   width: 200vh;
 }

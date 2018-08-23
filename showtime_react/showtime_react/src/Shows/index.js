@@ -17,15 +17,16 @@ class Shows extends Component {
 async componentDidMount() {
   try {
     const res = await fetch('http://127.0.0.1:8000/api/actors');
-    const actorsData = await res.json(); //set your json response to a new variable called shows.
-    console.log(actorsData, ' this is actorsData'); //array of your first api call. your objects inside the array, which is your actors data.
+    console.log(res);
+    const actorsData = await res.json(); //array of objects.
 
-//mapping over the array we got back. loop over each array over each show).
+      const wwActors = await actorsData.map(async eachActor => {
+      //step 1: map through your db json data. However, you it's only showing
+      //for each show over that shows json data. list of all your actors.
+      for (let i = 0; i < eachActor.shows.length; i++) {
+        //initially we were returning a promise for each thing, which made us wait for each thing. we made wwActors return all those promises. Wed did that with Promise.all so all the awaits (which are promises) would load with .then.
 
-    actorsData.map(async eachActor => { //map through the shows json data.
-      //for each show  over that shows json data. list of all your actors.
-      console.log(eachActor, ' this is show');
-      for (let i = 0; i < eachActor.shows.length; i++) { //map over all your actors' shows. each object is called shows. you go into each array that is called shows.
+        //map over all your actors' shows. each object is called shows. you go into each array that is called shows.
 
       //so show (actor object).shows (the array that is the property of shows)
 
@@ -36,50 +37,47 @@ async componentDidMount() {
       return eachActor;
     })
 
+//NOTE: Promise.all means all the awaits (which are promises) will load. THEN you can use the spread operator over them. wwActors is returning all the promises. Before we were returning a promise for each thing.
+    Promise.all(wwActors).then( data => {
+      this.setState({actors: [...this.state.actors, ...data]})
+    } );
 
-    this.setState({actors: actorsData}) //now you can export the data shows?
+
+    // this.setState({actors: wwActors}) //now you can export the data shows?
+    /* {actor.shows.map((show, index) => (<li key={index}>{show}</li>))} */
+
+
   } catch (err) {
     console.log(err);
   }
 }
-
+// {/* .map() is no logic. .map{} is logic */}
 render() {
+  console.log(this.state.actors);
+ const data = this.state.actors.length > 0 ?
+   this.state.actors.map((actor) => {
+     return (
+       <div className='actorInfo' key={actor.id} >
 
-  return (
+         <img className='actorImages'src={actor.actor_photo_url} />
+          <h4 className='recommendedShows'>Recommended Shows</h4>
+         {actor.shows.map((item, i) => {
+           return (
+
+             <a target='_blank'  href={item.show_main_url}><br/>{item.show_title}</a>
+                      )
+         })}
+       </div>
+     )})
+  : null
+console.log(data, 'data');
+
+return (
     <div>
-      {/* .map() is no logic. .map{} is logic */}
-        {
-          this.state.actors.map(actor => {
-              console.log("actor.shows: ", actor); //you can log if it's inside { in map. not inside (
-          return (
-            <div key={actor.id}>
-
-              <img className='actorImages'src={actor.actor_photo_url} />
-              <br/>
-              {/* {actor.shows.map((show, index) => (<li key={index}>{show}</li>))} */}
-              <br />
-              {/* map through each actor's shows and return an <a></a> with that show_main_url */}
-              {
-                actor.shows.map((show) => {
-                  console.log('show: ', show, typeof show);
-                  return (
-                    <div>
-                      <a href={show.show_main_url}>
-                        test
-                      </a>
-                    </div>
-                  )
-                })
-              }
-              <a
-                target="_blank" href={actor.shows.show_main_url}>
-                {actor.shows.show_title}
-              </a>
-            </div>
-          ) //returning the jsx element closes.
-      })}
+      {data}
     </div>
-  )
-}}
+  )}
+
+}
 
 export default Shows;

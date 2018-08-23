@@ -29,7 +29,7 @@ handleClick = () => {
 
  ];
 
-
+//object could be quote and picture
 
         //put Math.floor in an array. not just Math.floor(())
         let randomQuote = quotes[Math.floor((Math.random() * (quotes.length)))];
