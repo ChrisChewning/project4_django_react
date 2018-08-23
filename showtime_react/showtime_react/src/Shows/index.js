@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import WhatElse from '../WhatElse';
-import { Linkify } from 'react-linkify';
-import { Link } from 'react-router-dom';
-// import QuoteRandomizer from './QuoteRandomizer'
 
 class Shows extends Component {
   constructor(props){
