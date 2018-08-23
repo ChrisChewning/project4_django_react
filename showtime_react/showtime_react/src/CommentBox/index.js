@@ -11,7 +11,7 @@ class CommentBox extends Component {
        <div className="commentsBox">
          <h1>This is comment box</h1>
          < CommentForm />
-         < CommentList />
+         {/* < CommentList /> */}
        </div>
      );
    }
