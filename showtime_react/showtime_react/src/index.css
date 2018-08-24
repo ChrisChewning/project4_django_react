@@ -32,11 +32,11 @@ body {
 }
 
 .actorInfo {
-  min-height: 350px;
+  min-height: 250px;
   border: 1px solid black;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   display: inline-block;
   margin: 20px;
   padding: 10px;
@@ -63,3 +63,7 @@ body {
   margin-top: 20px;
   background-color: pink;
 }
+
+/* .commentButton {
+  background-color: black;
+} */

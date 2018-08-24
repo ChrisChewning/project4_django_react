@@ -75,7 +75,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
          <Input type="textarea" name="text" id="comment" placeholder="Comment" />
        </FormGroup>
      <FormGroup>
-     <Button>Submit</Button>
+     <Button className='commentButton'>Submit</Button>
    </FormGroup>
 
 

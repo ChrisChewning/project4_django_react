@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import WhatElse from '../WhatElse';
+// import WhatElse from '../WhatElse';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 class Shows extends Component {
   constructor(props){
@@ -54,17 +56,27 @@ render() {
  const data = this.state.actors.length > 0 ?
    this.state.actors.map((actor) => {
      return (
-       <div className='actorInfo' key={actor.id} >
 
-         <img className='actorImages'src={actor.actor_photo_url} />
+       // <div className='actorInfo' key={actor.id} >
+         <div key={actor.id} >
+         <Card className='actorInfo'>
+           <CardTitle>{actor.actor_name}</CardTitle>
+         <CardImg className='actorImages' src={actor.actor_photo_url} />
+         <CardBody>
+           <CardTitle>Best Known For: </CardTitle>
+           <CardSubtitle>
           <h4 className='recommendedShows'>Recommended Shows</h4>
+        </CardSubtitle>
+        <CardText>
          {actor.shows.map((item, i) => {
            return (
-
              <a target='_blank'  href={item.show_main_url}><br/>{item.show_title}</a>
                       )
          })}
-       </div>
+       </CardText>
+     </CardBody>
+     </Card>
+     </div>
      )})
   : null
 console.log(data, 'data');
