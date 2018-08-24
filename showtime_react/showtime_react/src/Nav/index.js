@@ -1,19 +1,27 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
 
-const Nav = () => {
+const NavBar = () => {
   return (
-    <nav className = "navBar">
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to='/whatelse'>Actors' Other Work?</Link></li>
-        <li><Link to='/similarshows'>Similar Shows</Link></li>
-        <li><Link to='/quotes'>Get a Quote!</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
-    </ul>
-  </nav>
-  )
-}
+<Nav className='navBar'>
+        <NavItem>
+          <NavLink href="/">Home</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/whatElse">Actors' Other Work</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/similarshows">Similar Shows</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href='/quotes'>Get a Quote!</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href='/blog'>Blog</NavLink>
+        </NavItem>
+      </Nav>
+)}
 
-export default Nav;
+
+export default NavBar;

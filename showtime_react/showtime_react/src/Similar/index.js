@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
+import {Jumbotron} from 'reactstrap';
+import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 class Similar extends Component {
   constructor(props) {
   super();
+  this.toggle = this.toggle.bind(this);
   this.state = {
     similar: [],
+    popoverOpen: false,
   }
 }
+
+toggle() {
+   this.setState({popoverOpen: !this.state.popoverOpen});
+ }
 
 
 getSimilarShows = async() => {
@@ -29,20 +37,39 @@ this.getSimilarShows().then((similarData) => {
 })
 }
 
+//https://reactstrap.github.io/components/collapse/
 
 render() {
 return (
-  <div className = "similarShows">
+  <Jumbotron className='Jumbotron'>
       <h1>Most Similar Shows: </h1>
 
       {this.state.similar.map(item => (
         <div key={item}>
           <h3>{item.name}</h3>
-          <p>{item.overview}</p>
+          {/* <h4>{item.overview}</h4> */}
+          <span>
+          <Button id="Popover1" onClick={this.toggle}>Click For Show Description
+      </Button>
+<div>
+          <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+
+{/* <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}> */}
+
+           <PopoverHeader className='similarShowName'>{item.name}</PopoverHeader>
+           <PopoverBody className='similarShowOverview'>{item.overview}</PopoverBody>
+          </Popover>
+
+        </div>
+</span>
+          {/* <h3>{item.name}</h3>
+          <p>{item.overview}</p> */}
+
+{/* GUESS: It loops, then it read the toggle function for the Popover. It is reading the last one. */}
 
        </div>
 ))}
-</div>
+</Jumbotron>
 
 )}
 

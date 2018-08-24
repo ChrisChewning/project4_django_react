@@ -11,7 +11,7 @@ body {
   /* background-color: blue; */
 }
 
-.navBar ul {
+.navBar {
   background-color: yellow;
   list-style-type: none;
   display: flex;
@@ -20,7 +20,7 @@ body {
 }
 
 .navBar li {
-  line-height: 10vh;
+  /* line-height: 10vh; */
     /* margin-left: 30px; */
 }
 
@@ -67,3 +67,31 @@ body {
 /* .commentButton {
   background-color: black;
 } */
+
+.quoteContainer {
+  /* background-color: #F0F0F0; */
+  margin: 25px;
+}
+
+.quoteImage {
+  border-radius: 12.5%;
+  height: 250px;
+  width: 250px;
+  padding: 20px;
+}
+
+.Jumbotron {
+  margin-top: 1%;
+  padding: 5%;
+  background-color: #F0F0F0;
+  text-align: center;
+}
+
+
+.similarShowName {
+  background-color: grey;
+}
+
+.similarShowOverview {
+  background-color: white;
+}

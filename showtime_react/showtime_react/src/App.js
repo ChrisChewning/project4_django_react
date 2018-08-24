@@ -3,13 +3,14 @@ import {Route, Redirect, Switch} from 'react-router-dom';
 import QuoteRandomizer from './QuoteRandomizer';
 import './App.css';
 import './index.css';
-import Nav from './Nav';
+import NavBar from './Nav';
 import Error from './Error';
 import Welcome from './Welcome';
 import Similar from './Similar';
 // import WhatElse from './WhatElse';
 import Shows from './Shows';
 import CommentBox from './CommentBox';
+// import { Button } from 'reactstrap';
 
 class App extends Component {
 
@@ -19,7 +20,7 @@ render() {
   return (
     <div>
 
-  < Nav />
+  < NavBar />
   {/* < CommentBox /> */}
 
   {/* < Shows /> */}
