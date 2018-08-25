@@ -58,7 +58,7 @@ render() {
      return (
 
        // <div className='actorInfo' key={actor.id} >
-         <div key={actor.id} >
+         <div className='actorContainer' key={actor.id} >
          <Card className='actorInfo'>
            <CardTitle>{actor.actor_name}</CardTitle>
          <CardImg className='actorImages' src={actor.actor_photo_url} />

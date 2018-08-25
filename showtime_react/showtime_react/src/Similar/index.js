@@ -44,27 +44,33 @@ return (
   <Jumbotron className='Jumbotron'>
       <h1>Most Similar Shows: </h1>
 
-      {this.state.similar.map(item => (
-        <div key={item}>
+      {this.state.similar.map((item, id) => (
+        <div key={id}>
+          {/* NOTE: originally it was just item as your 1st param and key={item} */}
+
           <h3>{item.name}</h3>
           {/* <h4>{item.overview}</h4> */}
-          <span>
+
           <Button id="Popover1" onClick={this.toggle}>Click For Show Description
       </Button>
 <div>
-          <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+          {/* <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}> */}
 
-{/* <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}> */}
 
-           <PopoverHeader className='similarShowName'>{item.name}</PopoverHeader>
+<Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+
+             <PopoverHeader className='similarShowName'>{item.name}</PopoverHeader>
            <PopoverBody className='similarShowOverview'>{item.overview}</PopoverBody>
           </Popover>
 
         </div>
-</span>
-          {/* <h3>{item.name}</h3>
-          <p>{item.overview}</p> */}
 
+           {/* <h3>{item.name}</h3> */}
+           {/* <img src='https:api.themoviedb.org/3/tv/688/similar?api_key=5e5af396956ad15decd6239be59b3c2d&language=en-US&page=1{item.poster_path}' /> */}
+{/* <p > {
+  item.overview
+}
+</p> * /} */}
 {/* GUESS: It loops, then it read the toggle function for the Popover. It is reading the last one. */}
 
        </div>
