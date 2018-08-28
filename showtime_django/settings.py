@@ -63,10 +63,10 @@ MIDDLEWARE = [
 
 
 
-# CORS_ORIGIN_WHITELIST = (
-#     'http://localhost:3000/',
-#     # 'https://tastedive.com/api/similar?k=317664-westwing-GQQG6YPC&q=west+wing&limit=5'
-# )
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000/',
+    'https://showtime-west-wing.herokuapp.com/',
+)
 
 # CORS_ALLOW_CREDENTIALS = True
 
