@@ -1,15 +1,9 @@
 from rest_framework import serializers
-from .models import Actor, Show
+from .models import Actor, Show, Comments
 
-#This serializer allows us to specify model fields that we want to include in our API and it will generate our JSONs accordingly. It will also allow us to link from one model to another.
+#This serializer allows us to specify model fields that we want to include in our API and it will generate our JSONs accordingly. It will also allow us to link from one model to another. Turns query sets into json data.
 
 #The Meta class within our Artist serializer class specifies meta data about our serializer. In this class, the model it serializes and the fields we want to serialize. Also, songs is our HyperlinkedRelatedField, `
-
-#serializers = turns query sets into json data.
-
-# class Meta:
-#     model = User
-#     fields = ('id', 'username', 'cars', 'comments')
 
 
 class ActorSerializer(serializers.HyperlinkedModelSerializer):
@@ -23,3 +17,9 @@ class ShowSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Show
         fields = ('id', 'show_title', 'show_photo_url', 'show_main_url')
+
+
+class CommentsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Comments
+        fields = ('id', 'name', 'message')

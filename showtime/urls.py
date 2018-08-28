@@ -15,13 +15,18 @@ from django.urls import path, include
 #these are your backend paths to show your data.
 
 urlpatterns = [
-
+#application built off your main urls
     # path('api/', views.ActorList.as_view(), name='both'),
 
-    path('api/actors/', views.ActorList.as_view(), name='actor-list'),
+    path('api/actors/', views.ActorList.as_view(), name='actor-list'), #route we're hitting
     path('api/actors/<int:pk>', views.ActorDetail.as_view(), name='actor-detail'),
 
     path('api/shows/', views.ShowList.as_view(), name='show-list'),
     path('api/shows/<int:pk>', views.ShowDetail.as_view(), name='show-detail'),
 
+
+    path('api/comments/', views.CommentsList.as_view(), name='comments-list'),
+    # path('api/comments/', views.ShowList')
+
+#go to views and run the function CommentsList
 ]

@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware', # new
+    'corsheaders.middleware.CorsMiddleware', # new. put this first. this is what you're using for your requests.
     'django.middleware.common.CommonMiddleware', # new
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,9 +56,17 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+
+
 CORS_ORIGIN_WHITELIST = (
-    'localhost:3000/'
+    'http://localhost:3000/',
+    # 'https://tastedive.com/api/similar?k=317664-westwing-GQQG6YPC&q=west+wing&limit=5'
 )
+
+# CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_ALLOW_ALL = True  #need this to allow the whitelist.
 
 ROOT_URLCONF = 'showtime_django.urls'
 
@@ -67,7 +75,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-      os.path.join(BASE_DIR, 'build') #instead of  'DIRS': [os.path.join(BASE_DIR, "templates"), ],
+      os.path.join(BASE_DIR, 'build')
     ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -105,8 +113,9 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-        # 'rest_framework.permissions.AllowAny'
+        #IF LOGIN:  'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        #IF NO LOGIN:
+        'rest_framework.permissions.AllowAny'
     ]
 }
 
