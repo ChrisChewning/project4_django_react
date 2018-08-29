@@ -25,7 +25,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
     e.preventDefault();
 
   //componentDidMount function here.
-    const getComment = await fetch('http://localhost:8000/api/comments/', {
+    // const getComment = await fetch('http://localhost:8000/api/comments/', {
       method: 'GET',
       // credentials: 'include', deals w authentication & login. If not logged in, your api won't be read. this is all tied to settings.py REST_FRAMEWORK
       // body: JSON.stringify(this.state),
@@ -35,10 +35,12 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
     });
 
 
+// https://showtime-west-wing.herokuapp.com/api/comments
+
   const addComment = async (e) => {
     e.preventDefault();
     try {
-    const postComment = await fetch('http://localhost:8000/api/comments/', {
+    // const postComment = await fetch('http://localhost:8000/api/comments/', {
       // const tokenCookies = Cookies.get('csrftoken');
 
       method: 'POST',
