@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/chris/ga-wdi-atx/project4/showtime_django/.env"
+VIRTUAL_ENV="/Users/chris/ga-wdi-atx/react-django app/showtime_django/.env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

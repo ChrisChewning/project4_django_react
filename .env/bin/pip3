@@ -1,5 +1,6 @@
-#!/Users/chris/ga-wdi-atx/project4/showtime_django/.env/bin/python3.7
-
+#!/bin/sh
+'''exec' "/Users/chris/ga-wdi-atx/react-django app/showtime_django/.env/bin/python3.7" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

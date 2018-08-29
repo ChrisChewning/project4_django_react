@@ -15,7 +15,7 @@ class Shows extends Component {
 
 async componentDidMount() {
   try {
-    const res = await fetch('https://showtime-west-wing.herokuapp.com/api/actors');
+    const res = await fetch('https://showtime-west-wing.herokuapp.com/api/actors/');
     console.log(res);
     const actorsData = await res.json(); //array of objects.
 

@@ -1,4 +1,4 @@
-#!/Users/chris/ga-wdi-atx/project4/showtime_django/.env/bin/python
+#!/Users/chris/ga-wdi-atx/react-django app/showtime_django/.env/bin/python
 
 import sys
 import getopt
