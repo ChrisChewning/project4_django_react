@@ -29,7 +29,7 @@ SECRET_KEY = 'zy+-e10^$*jzg=&m)=zl0hyb73^qb!b-)by$3i6vpatsx-i+0g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['showtime-west-wing.herokuapp.com', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['showtime-west-wing.herokuapp.com', '127.0.0.1:8000', 'localhost']
 
 
 
@@ -68,9 +68,9 @@ CORS_ORIGIN_WHITELIST = (
     'https://showtime-west-wing.herokuapp.com/',
 )
 
-# CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_CREDENTIALS = True
 
-CORS_ORIGIN_ALLOW_ALL = True  #need this to allow the whitelist.
+# CORS_ORIGIN_ALLOW_ALL = True  #need this to allow the whitelist.
 
 ROOT_URLCONF = 'showtime_django.urls'
 
