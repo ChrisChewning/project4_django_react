@@ -106,10 +106,10 @@ WSGI_APPLICATION = 'showtime_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'showtime',
-        'USER': 'showtimeuser',
-        'PASSWORD': 'showtime',
-        'HOST': 'localhost',
+        'NAME': 'd9dgvphuhii6go',
+        'USER': 'zabaulnlvtvfmn',
+        'PASSWORD': '13825af582c06951a63f932c88496fcbaa78648a34415170afc771f153172cc8',
+        'HOST': 'ec2-54-225-92-1.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
