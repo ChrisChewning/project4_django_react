@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path, re_path, include #re_path expects reg ex
 from django.contrib.auth import views as auth_views #user authentication
-
 from django.conf.urls import include
 # from showtime.views import renderReact #from folder showtime . views is views.py
 from django.views.generic import TemplateView #connecting to django.
@@ -20,13 +19,10 @@ urlpatterns = [
     path('', include('showtime.urls')),
     # path('accounts/', include('django.contrib.auth.urls')),
 
-
-
-
     # path('', include('/build/index.html')),
 
     #this is what actually connects everything.
-    # re_path('.*', TemplateView.as_view(template_name='index.html')),
+    re_path('.*', TemplateView.as_view(template_name='index.html')),
 ]
 
 
