@@ -4,6 +4,7 @@ import QuoteRandomizer from './QuoteRandomizer';
 import './App.css';
 import './index.css';
 import NavBar from './Nav';
+import Footer from './Footer';
 import Error from './Error';
 import Welcome from './Welcome';
 import Similar from './Similar';
@@ -25,6 +26,7 @@ render() {
 
   {/* < Shows /> */}
 
+
     <Switch>
       <Route exact path='/' component = {Welcome} />
       <Route exact path='/whatelse' component = {Shows} />
@@ -35,7 +37,7 @@ render() {
       <Redirect from='*' to = '/home' />
     </Switch>
 
-
+< Footer />
     </div>
   )
 }

@@ -8,68 +8,97 @@ body {
   padding: 0 !important;
   font-family: sans-serif;
   text-align: center;
-  background-color: black;
+
 }
 
 .navBar {
-  /* background-color: #2235aa; */
-  background-color: #BF0A30;
-    /* background-color: #F0F0F0; */
-  color: white;
+  background-color: #eceff1;
   list-style-type: none;
-  display: flex;
   height: 12vh;
-  justify-content: space-evenly;
   overflow: hidden;
-  display: inline-block;
-   vertical-align: middle;
-   width: 100%;
-   /* % for width is looking for the parent div that is position: RELATIVE */
+  color: black;
+  max-width: 100vw;
 }
 
-.navLink {
-  color: white;
-  line-height: 2.5em;
-  font-size: 32px;
-
-
+.navLinkRight  {
+  line-height: 3em;
+  font-size: 2em;
+  margin-right: 2%;
+  float: right;
+  color: black;
 }
 
-.navLink :hover {
+.navLinkRight a {
+  margin-right: 40px;
+  color: black;
+}
+
+/* .navLinkRight @ media  {
+
+} */
+
+
+#navLinkLeft {
+  float: left;
+  line-height: 3em;
+  /* height: 100px; */
+  vertical-align: middle;
+  font-size: 2em;
+  margin-left: 40px;
+}
+
+#navLinkLeft a {
+  color: black;
+}
+
+.navBar a :hover {
   background-color: white;
+  /* height: 2.5em; */
   text-decoration: underline !important;
-  /* NEITHER OF THESE WORK: */
-  /* border-color: black;
-  color: #2235aa; */
 }
 
+
+.footerContainer {
+  background-color: #eceff1;
+  text-align: center;
+  padding: 1%;
+  position: absolute;
+  /* top: 100%; */
+  /* left: 0%; */
+  /* bottom: 0%; */
+  width: 100%;
+}
 
 /* WELCOME PAGE */
-
 .welcomeComponent {
   position: relative;
   margin-top: 50px;
+  margin-bottom: 50px;
   padding: 10px;
-    text-align: center;
+  text-align: center;
 }
 
-.welcomeBanner {
+.welcomeTitle {
   margin-bottom: 30px;
 }
 
+.welcomeExplanation {
+  /* padding: 1%; */
+  margin: 2% 10%;
+
+}
+
+.welcomeImage {
+  width: 100%;
+}
 
 
 /* ACTOR PAGE */
-
 .actorContainer {
 /* NEED THIS TO BE CENTERED */
   display: inline-block;
   margin: 0 auto;
   text-align: center;
-  /* horizontal-align: cnter; */
-
-  /* background-color: grey; */
-
 }
 
 .actorImages {
@@ -93,35 +122,87 @@ body {
 
 }
 
-
-
-
-
 .recommendedShows {
   margin-top: 10px;
   margin-bottom: -10px;
 }
 
 /* COMMENT PAGE */
+.commentWrapper{
+  margin-top: 10px;
+  clear:both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .commentBox {
   /* background-color: #D3D3D3; */
-  height: 50vh;
-  width: 200vh;
+  /* height: 50vh;
+  width: 100px; */
 }
 
-.comment {
-  margin-top: 20px;
-  background-color: pink;
+.commentForm {
+  background-color: #ffebee;
+  padding: 20px;
+  width: 33.3%;
+  height: 30%;
+  margin-top: -1%;
+  margin-left: 40%;
+  margin-bottom: 5%;
 }
+
+.media {
+  margin-top: 5%;
+  margin-left: 10%;
+  float: right;
+  clear: both;
+}
+
+.media-body {
+  margin-left: 5%;
+  float: right;
+  clear: both;
+}
+
+.blogImg {
+  height: 43.3vh;
+  width: 33.3vw;
+  margin-right: 100px;
+}
+
 
 /* QUOTES PAGE */
+
+.quoteTitle {
+  margin-bottom: 2%;
+}
 
 .quoteImage {
   border-radius: 12.5%;
   height: 250px;
   width: 250px;
   padding: 20px;
+  margin-top: -1%;
+  margin-bottom: 2%;
 }
+
+.jumbotronQuotes {
+  text-align: center;
+  background-color: white !important;
+  width: 80%;
+  margin-left: 10%;
+  /* margin-bottom: 25%; */
+  /* margin-bottom: 10%; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.quotes {
+  margin-bottom: 12%;
+}
+
 
 
 /* SIMILAR SHOWS  */
@@ -129,10 +210,21 @@ body {
 .Jumbotron {
   margin-top: 1%;
   padding: 5%;
+  width: 25%;
+  height: 25%;
+  margin: 2%;
+  display: inline-block;
+  vertical-align: top;
+  /* background-color: white !important; */
   background-color: #F0F0F0;
   text-align: center;
 }
 
+.similarShows {
+  display: inline-block;
+  margin: 3%;
+  text-align: center;
+}
 
 .similarShowName {
   background-color: grey;

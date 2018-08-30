@@ -41,44 +41,38 @@ this.getSimilarShows().then((similarData) => {
 
 render() {
 return (
-  <Jumbotron className='Jumbotron'>
-      <h1>Most Similar Shows: </h1>
+  // <Jumbotron className='Jumbotron'>  //OTHER WAY: wrap everything in jumbotron. Comment out div className='similarShows' I think.
+<div className="similarShows">
+      <h1><i>Most Similar Shows: </i></h1>
 
       {this.state.similar.map((item, id) => (
-        <div key={id}>
+        <div key={id} className='Jumbotron'>
           {/* NOTE: originally it was just item as your 1st param and key={item} */}
 
-          <h3>{item.name}</h3>
+          {/* <h3>{item.name}</h3> */}
           {/* <h4>{item.overview}</h4> */}
 
-          <Button id="Popover1" onClick={this.toggle}>Click For Show Description
-      </Button>
-<div>
+          {/* <Button id="Popover1" onClick={this.toggle}>Click For Show Description */}
+      {/* </Button> */}
+
           {/* <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}> */}
 
-
+{/* <div>
 <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
 
              <PopoverHeader className='similarShowName'>{item.name}</PopoverHeader>
            <PopoverBody className='similarShowOverview'>{item.overview}</PopoverBody>
           </Popover>
-
-        </div>
-
-           {/* <h3>{item.name}</h3> */}
-           {/* <img src='https:api.themoviedb.org/3/tv/688/similar?api_key=5e5af396956ad15decd6239be59b3c2d&language=en-US&page=1{item.poster_path}' /> */}
-{/* <p > {
-  item.overview
-}
-</p> * /} */}
-{/* GUESS: It loops, then it read the toggle function for the Popover. It is reading the last one. */}
+         </div> */}
+         <h3>{item.name}</h3>
+          <p > {item.overview }</p>
 
        </div>
 ))}
-</Jumbotron>
+
+</div>
 
 )}
-
 }
 
 
