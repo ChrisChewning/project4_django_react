@@ -23,7 +23,8 @@ body {
   overflow: hidden;
   display: inline-block;
    vertical-align: middle;
-
+   width: 100%;
+   /* % for width is looking for the parent div that is position: RELATIVE */
 }
 
 .navLink {
@@ -46,6 +47,7 @@ body {
 /* WELCOME PAGE */
 
 .welcomeComponent {
+  position: relative;
   margin-top: 50px;
   padding: 10px;
     text-align: center;

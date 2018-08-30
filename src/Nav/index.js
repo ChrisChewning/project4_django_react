@@ -4,7 +4,7 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 
 const NavBar = () => {
   return (
-<Nav className='navBar'>
+<nav className='navBar'>
         <NavItem className='navLink'>
           <NavLink href="/">Home</NavLink>
         </NavItem>
@@ -20,7 +20,7 @@ const NavBar = () => {
         <NavItem className='navLink'>
           <NavLink href='/blog'>Blog</NavLink>
         </NavItem>
-      </Nav>
+      </nav>
 )}
 
 

@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
@@ -29,7 +29,7 @@ SECRET_KEY = 'zy+-e10^$*jzg=&m)=zl0hyb73^qb!b-)by$3i6vpatsx-i+0g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['showtime-west-wing.herokuapp.com', '127.0.0.1:8000', 'localhost']
+ALLOWED_HOSTS = ['showtime-west-wing.herokuapp.com', '127.0.0.1:8000', 'localhost', '127.0.0.1', 'localhost:8000']
 
 
 
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'WhiteNoise',
+    # 'WhiteNoise',
 ]
 
 
@@ -65,6 +65,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000/',
+
     'https://showtime-west-wing.herokuapp.com/',
 )
 
@@ -103,16 +104,28 @@ WSGI_APPLICATION = 'showtime_django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd9dgvphuhii6go',
+#         'USER': 'zabaulnlvtvfmn',
+#         'PASSWORD': '13825af582c06951a63f932c88496fcbaa78648a34415170afc771f153172cc8',
+#         'HOST': 'ec2-54-225-92-1.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd9dgvphuhii6go',
-        'USER': 'zabaulnlvtvfmn',
-        'PASSWORD': '13825af582c06951a63f932c88496fcbaa78648a34415170afc771f153172cc8',
-        'HOST': 'ec2-54-225-92-1.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': 'showtime',
+        'USER': 'showtimeuser',
+        'PASSWORD': 'showtime',
+        'HOST': 'localhost'
     }
 }
+
+
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
