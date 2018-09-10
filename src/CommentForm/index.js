@@ -8,7 +8,6 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
   constructor(props) {
   super(props);
   this.state = {
-    //could you wrap this in an object?
       name: '',
       message: '',
     }
@@ -18,7 +17,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
   handleChange = (e) => {
     this.setState({[e.target.name]:e.target.value})
   }
-  //NEED THE ROUTE IN HERE.
+
 
 
   handleSubmit = async (e) => {
@@ -61,7 +60,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
     return (
       <div className='commentWrapper'>
       <Form className='commentForm'>
-        <h3>Leave a Comment Below!</h3>
+        <h3>What to Cover Next? Email us!</h3>
         <FormGroup>
          <Label for="comment">Comment</Label>
          <Input type="textarea" name="text" id="comment" />

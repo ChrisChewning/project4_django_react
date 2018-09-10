@@ -64,7 +64,7 @@ render() {
            <CardTitle>{actor.actor_name}</CardTitle>
          <CardImg className='actorImages' src={actor.actor_photo_url} />
          <CardBody>
-           <CardTitle>Best Known For: </CardTitle>
+           {/* <CardTitle>Best Known For: </CardTitle> */}
            <CardSubtitle>
           <h4 className='recommendedShows'>Recommended Shows</h4>
         </CardSubtitle>
@@ -83,7 +83,7 @@ render() {
 console.log(data, 'data');
 
 return (
-    <div>
+    <div className='actorCardsContainer'> 
       {data}
     </div>
   )}
